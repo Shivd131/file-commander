@@ -58,7 +58,7 @@ const path = require("path");
   };
   const commandFileHandler = await fs.open("./command.txt", "r");
 
-  //as the next step, as all the FileHandle objects are <EventEmitter>s. using the emit property, we trigger it from line 34
+  //as the next step, as all the FileHandle objects are <EventEmitter>s. using the emit property, we trigger it later
   commandFileHandler.on("change", async () => {
     //the file was changed.
     console.log("the file was changed");
