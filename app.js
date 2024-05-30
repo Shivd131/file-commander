@@ -2,7 +2,7 @@ const { create } = require("domain");
 const fs = require("fs/promises");
 const path = require("path");
 //using the promises api for fs module
-//writing callback is more performant and preferred, however with promises, we avoid nested callbacks/ callback hell. we can handel our async opns more gracefully.
+//writing callback is more performant and preferred, however with promises, we avoid nested callbacks/ callback hell. we can handle our async opns more gracefully.
 
 (async () => {
   //commands
