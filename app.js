@@ -20,13 +20,8 @@ const fs = require("fs/promises");
     const offset = 0; //loc of buffer from which we start filling
     const length = buff.byteLength; //no of bytes to read
     const position = 0; // location of reading data
-    const content = await commandFileHandler.read(
-      buff,
-      offset,
-      length,
-      position
-    );
-    console.log(content);
+    await commandFileHandler.read(buff, offset, length, position);
+    console.log("Shiv", buff.toString("utf-8"));
   });
   const watcher = fs.watch("./command.txt");
   for await (const event of watcher) {
